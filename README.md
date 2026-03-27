@@ -261,4 +261,5 @@ See the [`docs/`](docs/) directory for detailed documentation:
 - [Project Overview](docs/OVERVIEW.md) — architecture, design decisions, security
 - [API Documentation](docs/API.md) — endpoints, request/response formats
 - [Database Schema](docs/DATABASE.md) — models, relationships, indexes
+- [Deployment](docs/DEPLOYMENT.md) — Vercel + Railway setup, environment variables, proxy config
 - [Build Plan](docs/STEPS.md) — phased development progress
