@@ -225,7 +225,7 @@ export function ExpenseFormDialog({ open, onClose, onSuccess, expense }: Props) 
           placeholder="Lunch, groceries, subscription..."
           rows={2}
           className={cn(
-            'flex w-full rounded-xl bg-muted/40 border border-transparent px-4 py-3 text-sm',
+            'flex w-full rounded-xl bg-muted/40 border border-transparent px-4 py-3 text-base',
             'placeholder:text-muted-foreground/50 resize-none',
             'focus:outline-none focus:border-primary/30 focus:bg-background transition-colors',
           )}
@@ -263,7 +263,6 @@ export function ExpenseFormDialog({ open, onClose, onSuccess, expense }: Props) 
     return (
       <Drawer open={open} onOpenChange={(v) => !v && onClose()}>
         <DrawerContent
-          className="min-h-[85vh]"
           onPointerDownOutside={(event) => {
             if (isDatePickerPortalTarget(event.target)) {
               event.preventDefault();
