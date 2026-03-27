@@ -68,89 +68,24 @@ export default function Home() {
     <main className="relative overflow-hidden bg-background text-foreground">
       {/* ═══════════════ DARK HERO ═══════════════ */}
       <div className="relative bg-[oklch(0.135_0.06_281)] pb-32 sm:pb-40 lg:pb-56">
-        {/* ── Animated Background Layers ── */}
+        {/* ── Background Layers ── */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {/* Morphing gradient blobs */}
-          <div
-            className="absolute -left-32 top-1/4 h-[500px] w-[500px] animate-morph-blob bg-violet-600/12 blur-[100px]"
-            style={{ animationDuration: '10s' }}
-          />
-          <div
-            className="absolute -right-24 top-0 h-[400px] w-[400px] animate-morph-blob bg-indigo-500/8 blur-[90px]"
-            style={{ animationDelay: '3s', animationDuration: '12s' }}
-          />
-          <div
-            className="absolute bottom-0 left-1/3 h-[350px] w-[350px] animate-morph-blob bg-purple-400/6 blur-[80px]"
-            style={{ animationDelay: '6s', animationDuration: '14s' }}
-          />
-          <div
-            className="absolute -bottom-20 right-1/4 h-[280px] w-[280px] animate-glow-breathe rounded-full bg-amber-500/4"
-            style={{ animationDelay: '2s' }}
-          />
+          <div className="absolute -left-32 top-1/4 h-[500px] w-[500px] bg-violet-600/12 blur-[100px]" />
+          <div className="absolute -right-24 top-0 h-[400px] w-[400px] bg-indigo-500/8 blur-[90px]" />
+          <div className="absolute bottom-0 left-1/3 h-[350px] w-[350px] bg-purple-400/6 blur-[80px]" />
 
-          {/* Subtle animated grid */}
           <div className="absolute inset-0 opacity-[0.03]" style={{
             backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
             backgroundSize: '40px 40px',
-            animation: 'grid-scroll 8s linear infinite',
           }} />
 
-          {/* Orbiting ring — large */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="animate-rotate-slow h-[600px] w-[600px] rounded-full border border-dashed border-white/4 lg:h-[800px] lg:w-[800px]" />
-          </div>
-          {/* Orbiting ring — small */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="h-[300px] w-[300px] rounded-full border border-white/3 lg:h-[450px] lg:w-[450px]" style={{ animation: 'rotate-slow 22s linear infinite reverse' }} />
-          </div>
-
-          {/* Floating geometric accents */}
-          <div className="animate-drift-x absolute left-[10%] top-[15%] h-2 w-2 rounded-full bg-violet-400/30" style={{ animationDuration: '15s' }} />
-          <div className="animate-drift-y absolute right-[15%] top-[20%] h-1.5 w-1.5 rounded-full bg-indigo-300/25" style={{ animationDuration: '11s' }} />
-          <div className="animate-drift-x absolute left-[25%] top-[70%] h-3 w-3 rounded-full bg-purple-400/15" style={{ animationDelay: '4s', animationDuration: '18s' }} />
-          <div className="animate-drift-y absolute right-[20%] top-[65%] h-1 w-1 rounded-full bg-violet-300/40" style={{ animationDelay: '2s', animationDuration: '9s' }} />
-          <div className="animate-drift-x absolute left-[65%] top-[30%] h-2.5 w-2.5 rounded-full bg-white/10" style={{ animationDelay: '7s', animationDuration: '14s' }} />
-
-          {/* Sparkle dots */}
-          <div className="animate-sparkle absolute left-[18%] top-[35%] h-1 w-1 rounded-full bg-white/60" style={{ animationDelay: '0s', animationDuration: '4s' }} />
-          <div className="animate-sparkle absolute left-[72%] top-[18%] h-1 w-1 rounded-full bg-violet-300/60" style={{ animationDelay: '1.3s', animationDuration: '3.5s' }} />
-          <div className="animate-sparkle absolute left-[45%] top-[75%] h-0.5 w-0.5 rounded-full bg-white/50" style={{ animationDelay: '2.5s', animationDuration: '5s' }} />
-          <div className="animate-sparkle absolute left-[85%] top-[55%] h-1 w-1 rounded-full bg-indigo-300/50" style={{ animationDelay: '0.7s', animationDuration: '4.5s' }} />
-          <div className="animate-sparkle absolute left-[8%] top-[60%] h-0.5 w-0.5 rounded-full bg-white/40" style={{ animationDelay: '3.2s', animationDuration: '3.8s' }} />
-
-          {/* Floating diamond shapes */}
-          <div className="animate-drift-y absolute left-[5%] top-[45%] h-3 w-3 rotate-45 rounded-sm border border-violet-400/15" style={{ animationDuration: '13s', animationDelay: '1s' }} />
-          <div className="animate-drift-x absolute right-[8%] top-[40%] h-4 w-4 rotate-45 rounded-sm border border-indigo-400/10" style={{ animationDuration: '16s', animationDelay: '5s' }} />
-          <div className="animate-drift-y absolute left-[55%] top-[12%] h-2 w-2 rotate-45 rounded-sm border border-white/8" style={{ animationDuration: '10s', animationDelay: '3s' }} />
-
-          {/* Orbiting particles on the large ring */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="animate-orbit h-0 w-0" style={{ '--orbit-r': '300px', '--orbit-dur': '25s' } as React.CSSProperties}>
-              <div className="h-2 w-2 rounded-full bg-violet-400/40 shadow-[0_0_8px_rgba(139,92,246,0.3)]" />
-            </div>
+            <div className="h-[600px] w-[600px] rounded-full border border-dashed border-white/4 lg:h-[800px] lg:w-[800px]" />
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="animate-orbit h-0 w-0" style={{ '--orbit-r': '220px', '--orbit-dur': '18s', animationDirection: 'reverse', animationDelay: '5s' } as React.CSSProperties}>
-              <div className="h-1.5 w-1.5 rounded-full bg-indigo-300/30" />
-            </div>
-          </div>
-          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="animate-orbit h-0 w-0" style={{ '--orbit-r': '400px', '--orbit-dur': '35s', animationDelay: '10s' } as React.CSSProperties}>
-              <div className="h-1 w-1 rounded-full bg-white/25" />
-            </div>
+            <div className="h-[300px] w-[300px] rounded-full border border-white/3 lg:h-[450px] lg:w-[450px]" />
           </div>
         </div>
-
-        {/* Grain overlay */}
-        <svg
-          className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03]"
-          aria-hidden="true"
-        >
-          <filter id="grain">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#grain)" />
-        </svg>
 
         {/* Top edge highlight */}
         <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
@@ -158,7 +93,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
           {/* ── Navigation ── */}
           <header className="animate-fade-in-up pt-5">
-            <nav className="flex items-center justify-between rounded-2xl border border-white/6 bg-white/3 px-4 py-3 backdrop-blur-xl sm:px-6">
+            <nav className="flex items-center justify-between rounded-2xl border border-white/6 bg-white/5 px-4 py-3 sm:px-6">
               <Link href="/" className="flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-sidebar-primary to-violet-400 shadow-lg shadow-violet-500/20">
                   <Wallet className="h-4 w-4 text-white" />
@@ -188,7 +123,7 @@ export default function Home() {
           {/* ── Hero Content ── */}
           <div className="pt-16 text-center sm:pt-20 lg:pt-28">
             {/* Glowing badge */}
-            <div className="animate-fade-in-up stagger-1 mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-1.5 backdrop-blur-sm">
+            <div className="animate-fade-in-up stagger-1 mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-1.5">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-400" />
@@ -237,7 +172,7 @@ export default function Home() {
               ].map((pill) => (
                 <div
                   key={pill.label}
-                  className="group flex items-center gap-2 rounded-full border border-white/6 bg-white/3 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-violet-400/20 hover:bg-violet-500/8"
+                  className="group flex items-center gap-2 rounded-full border border-white/6 bg-white/5 px-4 py-2 transition-all duration-300 hover:border-violet-400/20 hover:bg-violet-500/8"
                 >
                   <span className="text-sm font-bold text-white transition-colors group-hover:text-violet-200">{pill.value}</span>
                   <span className="text-xs text-white/40">{pill.label}</span>
@@ -635,21 +570,10 @@ export default function Home() {
         id="features"
         className="relative overflow-hidden bg-[oklch(0.135_0.06_281)] py-20 text-white sm:py-24 lg:py-32"
       >
-        {/* Ambient background */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-40 top-0 h-[500px] w-[500px] animate-pulse-glow rounded-full bg-violet-600/8 blur-[120px]" />
-          <div className="absolute -right-32 bottom-0 h-[400px] w-[400px] animate-pulse-glow rounded-full bg-indigo-500/6 blur-[100px]" style={{ animationDelay: '2s' }} />
-          <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 animate-pulse-glow rounded-full bg-purple-500/5 blur-[80px]" style={{ animationDelay: '3.5s' }} />
+          <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-violet-600/8 blur-[120px]" />
+          <div className="absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-indigo-500/6 blur-[100px]" />
         </div>
-        <svg
-          className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.02]"
-          aria-hidden="true"
-        >
-          <filter id="grainFeatures">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#grainFeatures)" />
-        </svg>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
           {/* Section header */}
@@ -671,7 +595,7 @@ export default function Home() {
             {features.map((item, i) => (
               <div
                 key={item.title}
-                className={`animate-fade-in-up stagger-${i + 1} group relative overflow-hidden rounded-2xl border border-white/6 bg-white/3 p-6 backdrop-blur-sm transition-all duration-500 hover:border-white/12 hover:bg-white/6 hover:shadow-[0_0_40px_rgba(139,92,246,0.08)] sm:p-7 lg:p-8`}
+                className={`animate-fade-in-up stagger-${i + 1} group relative overflow-hidden rounded-2xl border border-white/6 bg-white/4 p-6 transition-all duration-500 hover:border-white/12 hover:bg-white/6 sm:p-7 lg:p-8`}
               >
                 <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-violet-500/4 transition-all duration-500 group-hover:scale-[2] group-hover:bg-violet-500/6" />
 
@@ -704,7 +628,7 @@ export default function Home() {
             {highlights.map((item, i) => (
               <div
                 key={item.label}
-                className={`animate-count-up stagger-${i + 1} group flex flex-col items-center rounded-2xl border border-white/5 bg-white/2 py-6 text-center backdrop-blur-sm transition-all duration-500 hover:border-white/10 hover:bg-white/5 sm:py-8`}
+                className={`animate-count-up stagger-${i + 1} group flex flex-col items-center rounded-2xl border border-white/5 bg-white/3 py-6 text-center transition-all duration-500 hover:border-white/10 hover:bg-white/5 sm:py-8`}
               >
                 <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-violet-500/15 to-indigo-500/15 ring-1 ring-white/8 transition-all duration-300 group-hover:ring-white/15 group-hover:shadow-lg group-hover:shadow-violet-500/10 sm:mb-4 sm:h-12 sm:w-12">
                   <item.icon className="h-5 w-5 text-violet-300 transition-transform duration-300 group-hover:scale-110" />
@@ -722,20 +646,6 @@ export default function Home() {
       {/* ═══════════════ CTA ═══════════════ */}
       <section className="relative overflow-hidden bg-[oklch(0.135_0.06_281)] text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
-        <svg
-          className="absolute inset-0 h-full w-full pointer-events-none opacity-[0.025]"
-          aria-hidden="true"
-        >
-          <filter id="grain2">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.65"
-              numOctaves="3"
-              stitchTiles="stitch"
-            />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#grain2)" />
-        </svg>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 lg:px-10 lg:py-24">
           <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
