@@ -5,11 +5,12 @@ export const AUTH_COOKIE_NAME = 'token';
 
 function getBaseCookieOptions(): CookieOptions {
   const env = getEnv();
+  const isProduction = env.NODE_ENV === 'production';
 
   return {
     httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: 'lax',
+    secure: isProduction,
+    sameSite: isProduction ? 'none' : 'lax',
     path: '/',
   };
 }

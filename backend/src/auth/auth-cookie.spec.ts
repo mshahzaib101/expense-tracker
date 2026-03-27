@@ -38,7 +38,7 @@ describe('auth-cookie', () => {
       expect.objectContaining({
         httpOnly: true,
         secure: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         maxAge: 7 * 24 * 60 * 60 * 1000,
       }),
@@ -57,8 +57,25 @@ describe('auth-cookie', () => {
       expect.objectContaining({
         httpOnly: true,
         secure: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
+      }),
+    );
+  });
+
+  it('uses sameSite lax in development', () => {
+    process.env = { ...process.env, NODE_ENV: 'development' };
+    resetEnvCache();
+
+    const response = { cookie: jest.fn() };
+    setAuthCookie(response as never, 'token-value');
+
+    expect(response.cookie).toHaveBeenCalledWith(
+      AUTH_COOKIE_NAME,
+      'token-value',
+      expect.objectContaining({
+        secure: false,
+        sameSite: 'lax',
       }),
     );
   });
