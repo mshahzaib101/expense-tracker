@@ -67,7 +67,7 @@ expense-tracker/
 
 ### Prerequisites
 
-- Node.js 22 LTS (or 20+)
+- Node.js 22.12+ LTS recommended (or 20.19+)
 - npm
 - Docker and Docker Compose
 
@@ -237,6 +237,8 @@ docker compose ps        # Check status
 docker compose down      # Stop
 docker compose up -d     # Restart
 ```
+
+If `docker` is not installed or `docker compose` is unavailable, install Docker Desktop first, then re-run the command above.
 
 ### Prisma client issues
 
