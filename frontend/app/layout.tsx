@@ -17,8 +17,19 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Expense Tracker",
-  description: "Track and manage your daily expenses",
+  metadataBase: new URL("https://expense-tracker-lyart-sigma.vercel.app"),
+  title: {
+    default: "Expense Tracker",
+    template: "%s | Expense Tracker",
+  },
+  description: "Track and manage your daily expenses with interactive dashboards, category analytics, and CSV export.",
+  openGraph: {
+    title: "Expense Tracker",
+    description: "Track and manage your daily expenses with interactive dashboards, category analytics, and CSV export.",
+    url: "https://expense-tracker-lyart-sigma.vercel.app",
+    siteName: "Expense Tracker",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
